@@ -1,4 +1,5 @@
 
+
 name: Build GreenTool PS4
 
 on:
@@ -15,9 +16,7 @@ jobs:
       - name: Recuperer le projet
         uses: actions/checkout@v4
 
-      - name: Verifier le projet
+      - name: Verifier les fichiers
         run: |
           echo "GreenTool PS4"
-          echo "Verification des fichiers..."
           find . -maxdepth 3 -type f
-
