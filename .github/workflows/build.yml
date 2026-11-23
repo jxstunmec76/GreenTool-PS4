@@ -1,0 +1,23 @@
+name: Build GreenTool PS4
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Recuperer le projet
+        uses: actions/checkout@v4
+
+      - name: Compiler GreenTool
+        uses: OpenOrbis/toolchain-action@main
+        with:
+          version: latest
+          command: |
+            echo "GreenTool PS4 - preparation de la compilation"
+            find . -maxdepth 3 -type f
