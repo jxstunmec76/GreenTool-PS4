@@ -17,7 +17,8 @@ jobs:
       - name: Compiler GreenTool
         uses: OpenOrbis/toolchain-action@main
         with:
-          version: latest
-          command: |
-            echo "GreenTool PS4 - preparation de la compilation"
-            find . -maxdepth 3 -type f
+       version: v0.5.1
+command: |
+  echo "GreenTool PS4 - verification de l'environnement"
+  echo "Fichiers du projet :"
+  find . -maxdepth 3 -type f
