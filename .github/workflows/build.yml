@@ -15,7 +15,11 @@ jobs:
     steps:
       - name: Recuperer le projet
         uses: actions/checkout@v4
-
+      - name: Installer et tester OpenOrbis
+        uses: OpenOrbis/toolchain-action@main
+        with:
+          version: v0.5.1
+          command: echo "OpenOrbis disponible"
       - name: Verifier les fichiers
         run: |
           echo "GreenTool PS4"
