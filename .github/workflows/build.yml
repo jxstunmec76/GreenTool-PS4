@@ -1,6 +1,5 @@
 
-
-name: Build GreenTool PS4
+name: Verifier le projet
 
 on:
   workflow_dispatch:
@@ -15,11 +14,10 @@ jobs:
     steps:
       - name: Recuperer le projet
         uses: actions/checkout@v4
-        uses: OpenOrbis/toolchain-action@main
-        with:
-          version: v0.5.1
-          command: echo "OpenOrbis disponible"
+
       - name: Verifier les fichiers
         run: |
           echo "GreenTool PS4"
+          echo "Verification des fichiers..."
           find . -maxdepth 3 -type f
+
